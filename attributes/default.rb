@@ -6,7 +6,7 @@
 default['nagent']['api_key'] ="Your Neptune API key here"
 
 # Username for the agent to run as
-default['nagent']['user_name'] ="neptuneio"
+default['nagent']['user_name'] ="neptune"
 
 # Give sudo priveleges to the agent user. By default it's false
 default['nagent']['require_sudo'] ="false"
