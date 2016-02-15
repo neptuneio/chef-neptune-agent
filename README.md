@@ -32,7 +32,7 @@ Step 2 : Update your Neptune API key
 
 Optional : Update non-mandatory fields in the attributes file.
 
-    default['nagent']['user_name'] = ["neptuneio"]
+    default['nagent']['user_name'] = "neptune"
     default['nagent']['assigned_hostname'] = nil
     default['nagent']['require_sudo'] = "false"
 
@@ -44,7 +44,7 @@ Alternatively, if your chef version supports custom JSON, you can use the follow
 {
   "nagent" : {
       "api_key": "2723723872323223",
-      "user_name" : ["neptuneio"],
+      "user_name" : "neptune",
       "assigned_hostname" : "Your non-default hostname here",
       "require_sudo" : "false"
   }
@@ -64,7 +64,7 @@ Simply include `chef-neptune-agent` recipe in your node's `run_list`:
         "default" : {
             "nagent" : {
                 "api_key": "2723723872323223",
-                "user_name" : ["neptuneio"],
+                "user_name" : "neptune",
                 "assigned_hostname" : "Your non-default hostname here",
                 "require_sudo" : "false"
             }
@@ -78,4 +78,4 @@ Please clone, make changes and send in a pull request
 
 License and Authors
 -------------------
-Copyright Neptune.io, Inc. 2015
+Copyright Neptune.io, Inc. 2016
