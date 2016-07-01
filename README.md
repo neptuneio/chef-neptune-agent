@@ -35,9 +35,11 @@ Optional : Update non-mandatory fields in the attributes file.
     default['nagent']['user_name'] = "neptune"
     default['nagent']['assigned_hostname'] = nil
     default['nagent']['require_sudo'] = "false"
+    default['nagent']['github_api_key'] = nil
 
 1. Change the username if you want to run agent as a different user
 2. Add an assigned hostname to over-ride default hostname of the host
+3. If you are using runbooks from private Github repo, set the read-only Github API key here. 
 
 Alternatively, if your chef version supports custom JSON, you can use the following
 ```json
@@ -46,6 +48,7 @@ Alternatively, if your chef version supports custom JSON, you can use the follow
       "api_key": "2723723872323223",
       "user_name" : "neptune",
       "assigned_hostname" : "Your non-default hostname here",
+      "github_api_key" : "Set read-only Github API key if you are using private Github runbooks only",
       "require_sudo" : "false"
   }
 }
@@ -66,6 +69,7 @@ Simply include `chef-neptune-agent` recipe in your node's `run_list`:
                 "api_key": "2723723872323223",
                 "user_name" : "neptune",
                 "assigned_hostname" : "Your non-default hostname here",
+                "github_api_key" : "Set read-only Github API key if you are using private Github runbooks only",
                 "require_sudo" : "false"
             }
         }

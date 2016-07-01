@@ -14,6 +14,10 @@ default['nagent']['require_sudo'] ="false"
 # An assigned hostname to over-ride default server hostname
 default['nagent']['assigned_hostname'] = nil
 
+# Github API key to be used. This should be set only if you are using
+# private Github for your runbooks.
+default['nagent']['github_api_key'] = nil
+
 # Neptune endpoint for agent to connect to
 default['nagent']['end_point'] ="www.neptune.io"
 

@@ -25,6 +25,7 @@ when 'darwin', 'mac_os_x'
             'AGENT_USER' => node[:nagent][:user_name] ,
             'REQUIRE_SUDO' => node[:nagent][:require_sudo],
             'ASSIGNED_HOST_NAME' => node[:nagent][:assigned_hostname],
+            'GITHUB_API_KEY' => node[:nagent][:github_api_key],
             'END_POINT' => node[:nagent][:end_point]
         })
     end
@@ -53,6 +54,7 @@ else
             'AGENT_USER' => node[:nagent][:user_name] ,
             'REQUIRE_SUDO' => node[:nagent][:require_sudo],
             'ASSIGNED_HOST_NAME' => node[:nagent][:assigned_hostname],
+            'GITHUB_API_KEY' => node[:nagent][:github_api_key],
             'END_POINT' => node[:nagent][:end_point]
         })
     end
